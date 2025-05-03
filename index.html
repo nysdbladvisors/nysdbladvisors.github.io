@@ -6,7 +6,7 @@
     <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
     <title>NYS DBL & PFL Advisors</title>
     <meta name="description" content="Expert New York disability benefits consulting for Short-Term Disability (DBL) and Paid Family Leave (PFL). Watch bilingual Q&A and 'Did You Know' reels in English and Spanish.">
-    <meta name="keywords" content="NYS DBL, PFL, New York disability benefits consulting, Paid Family Leave consulting, disability benefits, New York, bilingual, PFL eligibility">
+    <meta name="keywords" content="NYS DBL, PFL, New York disability benefits consulting, Paid Family Leave consulting, New York DBL consulting, PFL benefits, disability benefits, New York, bilingual, PFL eligibility">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://nysdbladvisors.com">
     <link rel="alternate" hreflang="es" href="https://nysdbladvisors.com">
@@ -29,8 +29,15 @@
             "url": "https://nysdbladvisors.com",
             "description": "Expert consulting for New York State Short-Term Disability (DBL) and Paid Family Leave (PFL) benefits.",
             "telephone": "+15166303210",
-            "email": "nysdbladvisors@gmail.com",
-            "areaServed": "New York"
+            "email": "info@nysdbladvisors.com",
+            "areaServed": "New York",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+15166303210",
+                "contactType": "Customer Service",
+                "email": "info@nysdbladvisors.com",
+                "availableLanguage": ["English", "Spanish"]
+            }
         },
         {
             "@context": "https://schema.org",
@@ -43,10 +50,61 @@
                     "item": "https://nysdbladvisors.com"
                 }
             ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What is NYS DBL?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "NYS DBL (Disability Benefits Law) provides short-term disability benefits to eligible New York employees for non-work-related injuries or illnesses."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Who qualifies for PFL in New York?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "New York’s Paid Family Leave (PFL) is available to employees who work for a covered employer, meet time and wage requirements, and need leave for bonding, caregiving, or military exigencies."
+                    }
+                }
+            ]
         }
     ]
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 50;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans">
     <!-- Header -->
@@ -67,9 +125,12 @@
             <h2 class="text-2xl font-semibold text-gray-800 mb-4">Expert New York Disability Benefits Consulting</h2>
             <p class="text-gray-600 mb-2">Simplify your Short-Term Disability (DBL) and Paid Family Leave (PFL) with our expert consulting. Watch our bilingual Q&A and "Did You Know" reels in English and Spanish!</p>
             <p class="text-gray-600 mb-6">¡Simplifique sus beneficios de discapacidad a corto plazo (DBL) y licencia familiar pagada (PFL) con nuestra consultoría experta! ¡Mira nuestros videos bilingües!</p>
-            <div class="space-x-4">
+            <div class="mb-4">
+                <button class="bg-red-600 text-white py-2 px-4 rounded animate-pulse" onclick="openModal('englishModal')" aria-label="Learn About Your Work Benefits in English">New Yorkers, Learn About Your Work Benefits!</button>
+                <button class="bg-red-600 text-white py-2 px-4 rounded animate-pulse mt-2" onclick="openModal('spanishModal')" aria-label="Learn About Your Work Benefits in Spanish">Hispanos, Conozcan Sus Beneficios de Trabajo!</button>
+            </div>
+            <div>
                 <a href="https://linktr.ee/nysdbladvisors" class="inline-block bg-blue-600 text-white py-2 px-6 rounded hover:bg-blue-700">Take Our Free Intake Quiz</a>
-                <a href="https://linktr.ee/nysdbladvisors" class="inline-block bg-gray-600 text-white py-2 px-6 rounded hover:bg-gray-700">Book a Package</a>
             </div>
         </section>
 
@@ -137,11 +198,51 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-4 text-center">
-            <p>Email: <a href="mailto:nysdbladvisors@gmail.com" class="text-blue-400 hover:underline">nysdbladvisors@gmail.com</a></p>
+            <p>Email: <a href="mailto:info@nysdbladvisors.com" class="text-blue-400 hover:underline">info@nysdbladvisors.com</a></p>
             <p>Phone: <a href="tel:+15166303210" class="text-blue-400 hover:underline">516-630-3210</a></p>
             <p class="mt-2">© 2025 NYS DBL & PFL Advisors. All rights reserved.</p>
             <p class="mt-2 text-sm">Expanding nationwide soon to serve Short-Term Disability and Paid Family Leave needs across the US.</p>
         </div>
     </footer>
+
+    <!-- Modal Pop-Ups -->
+    <div id="englishModal" class="modal" role="dialog" aria-label="English Benefits Information">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('englishModal')" aria-label="Close">&times;</span>
+            <p>Did you know you can use your work-related benefits for illnesses or accidents not caused at work? e.g., a fall at home or somewhere other than work. If you have a work-related injury, you must apply for benefits with the Workers' Compensation Board.</p>
+            <p><a href="https://www.wcb.ny.gov/content/main/Workers/Workers.jsp" class="text-blue-600 hover:underline">https://www.wcb.ny.gov/content/main/Workers/Workers.jsp</a></p>
+            <p>If you have a medical condition that prevents you from working, this benefit provides you with salary coverage while you recover and return to work.</p>
+            <p>Did you know you can use your paid family leave benefits to care for a family member and receive salary coverage while you are away from work caring for your family member?</p>
+            <p>Email <a href="mailto:info@nysdbladvisors.com" class="text-blue-600 hover:underline">info@nysdbladvisors.com</a> for your FREE consultation.</p>
+        </div>
+    </div>
+    <div id="spanishModal" class="modal" role="dialog" aria-label="Spanish Benefits Information">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal('spanishModal')" aria-label="Close">&times;</span>
+            <p>¿Sabías que puedes usar tus beneficios laborales por enfermedad o por accidente no ocasionado en el trabajo? e.j., caída en tu casa, o en otro lugar que no sea en el trabajo (si te accidentas en el trabajo debes aplicar para beneficios con la junta de compensación laboral.</p>
+            <p><a href="https://www.wcb.ny.gov/content/main/Workers/Workers.jsp" class="text-blue-600 hover:underline">https://www.wcb.ny.gov/content/main/Workers/Workers.jsp</a></p>
+            <p>Si tienes alguna condición médica que te previene trabajar, este beneficio te provee cobertura de salario mientras te recuperas y puedas volver a trabajar.</p>
+            <p>¿Sabías que puedes usar tus beneficios laborales de licencia familiar pagada para cuidar a un familiar y recibir cobertura salarial mientras el tiempo que estés fuera del empleo cuidando a tu familiar?</p>
+            <p>Envíe un correo electrónico a <a href="mailto:info@nysdbladvisors.com" class="text-blue-600 hover:underline">info@nysdbladvisors.com</a> para obtener una consulta GRATUITA.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modals -->
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
