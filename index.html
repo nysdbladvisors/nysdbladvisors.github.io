@@ -104,6 +104,22 @@
             font-size: 24px;
             cursor: pointer;
         }
+        .speech-bubble {
+            position: relative;
+            background: white;
+            border: 2px solid #2563eb;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50px;
+            border: 10px solid transparent;
+            border-top-color: #2563eb;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans">
@@ -113,7 +129,7 @@
             <img src="logo.png" alt="NYS DBL & PFL Advisors Logo" class="h-16 mr-4">
             <div>
                 <h1 class="text-3xl font-bold">NYS DBL & PFL Advisors</h1>
-                <p class="mt-2 text-lg">Your Experts for New York Disability Benefits & Paid Family Leave</p>
+                <p class="mt-2 text-lg">Your Experts for New York Short-Term Disability Benefits & Paid Family Leave</p>
             </div>
         </div>
     </header>
@@ -193,6 +209,25 @@
                 </a>
             </div>
         </section>
+
+        <!-- Testimonials Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="speech-bubble">
+                    <p class="text-gray-600">"NYS DBL & PFL Advisors made my claim process seamless! Their expertise saved me so much time."</p>
+                    <p class="text-sm text-gray-500 mt-2">- Maria R.</p>
+                </div>
+                <div class="speech-bubble">
+                    <p class="text-gray-600">"Thanks to their bilingual support, I understood my PFL benefits clearly and got approved quickly."</p>
+                    <p class="text-sm text-gray-500 mt-2">- Juan C.</p>
+                </div>
+                <div class="speech-bubble">
+                    <p class="text-gray-600">"They handled all the paperwork for my DBL claim, letting me focus on recovery."</p>
+                    <p class="text-sm text-gray-500 mt-2">- Sarah T.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -201,14 +236,14 @@
             <p>Email: <a href="mailto:info@nysdbladvisors.com" class="text-blue-400 hover:underline">info@nysdbladvisors.com</a></p>
             <p>Phone: <a href="tel:+15166303210" class="text-blue-400 hover:underline">516-630-3210</a></p>
             <p class="mt-2">© 2025 NYS DBL & PFL Advisors. All rights reserved.</p>
-            <p class="mt-2 text-sm">Expanding nationwide soon to serve Short-Term Disability and Paid Family Leave needs across the US.</p>
+            <p class="mt-2 text-sm">Don't stress the process, let us do all the paperwork for you.</p>
         </div>
     </footer>
 
     <!-- Modal Pop-Ups -->
     <div id="englishModal" class="modal" role="dialog" aria-label="English Benefits Information">
         <div class="modal-content">
-            <span class="close-button" onclick="closeModal('englishModal')" aria-label="Close">&times;</span>
+            <span class="close-button" onclick="closeModal('englishModal')" aria-label="Close">×</span>
             <p>Did you know you can use your work-related benefits for illnesses or accidents not caused at work? e.g., a fall at home or somewhere other than work. If you have a work-related injury, you must apply for benefits with the Workers' Compensation Board.</p>
             <p><a href="https://www.wcb.ny.gov/content/main/Workers/Workers.jsp" class="text-blue-600 hover:underline">https://www.wcb.ny.gov/content/main/Workers/Workers.jsp</a></p>
             <p>If you have a medical condition that prevents you from working, this benefit provides you with salary coverage while you recover and return to work.</p>
@@ -218,7 +253,7 @@
     </div>
     <div id="spanishModal" class="modal" role="dialog" aria-label="Spanish Benefits Information">
         <div class="modal-content">
-            <span class="close-button" onclick="closeModal('spanishModal')" aria-label="Close">&times;</span>
+            <span class="close-button" onclick="closeModal('spanishModal')" aria-label="Close">×</span>
             <p>¿Sabías que puedes usar tus beneficios laborales por enfermedad o por accidente no ocasionado en el trabajo? e.j., caída en tu casa, o en otro lugar que no sea en el trabajo (si te accidentas en el trabajo debes aplicar para beneficios con la junta de compensación laboral.</p>
             <p><a href="https://www.wcb.ny.gov/content/main/Workers/Workers.jsp" class="text-blue-600 hover:underline">https://www.wcb.ny.gov/content/main/Workers/Workers.jsp</a></p>
             <p>Si tienes alguna condición médica que te previene trabajar, este beneficio te provee cobertura de salario mientras te recuperas y puedas volver a trabajar.</p>
