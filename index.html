@@ -34,6 +34,27 @@ h1,h2,h3{line-height:1.22}
 .review-kicker,.benefit-banner .kicker{font-size:13px}
 .price-card .tag{font-size:14px}
 @media(max-width:620px){.hero h1{font-size:clamp(34px,8vw,40px)}.section-title{font-size:29px}.review-box{padding:23px 17px}.review-choice{padding:20px}.btn{padding:13px 15px}.benefit-banner{padding:42px 0}.pricing-section{padding:40px 0}}
+
+/* Desktop readability upgrade: larger copy, clear spacing, comfortable contrast */
+@media (min-width: 881px) {
+  :root { --body-size:19px; --small-size:16px; --button-size:17px; }
+  body { line-height:1.72; }
+  .container { width:min(1320px,91%); }
+  .section-intro,.review-box .section-intro,.review-choice p,.panel p,.step p,.benefit-banner p,.terms-box p,.es-choice p,.es-intro,.price-card p,.price-card li,.review-note,.checkout-note {font-size:19px;line-height:1.72;}
+  .review-choice h3,.step h3,.es-choice h3 {font-size:24px;}
+  .price-card h3,.panel h2 {font-size:26px;}
+  .review-box {padding:42px 45px;}
+  .review-choice,.price-card {padding:30px;}
+  .btn,.review-choice .btn,.price-card .btn,.es-price-card .btn,.hero-actions .btn {font-size:17px;padding:16px 20px;}
+  .review-es,.review-note,.footer p,.footer a,.trust-item {font-size:16px;}
+  .fine,.disclaimer {font-size:15px!important;}
+  .hero p {font-size:20px;line-height:1.65;}
+  .calc-inputs label,.calc-result {font-size:19px;}
+  .price-card .tag,.review-kicker {font-size:16px;}
+}
+@media (min-width:621px) and (max-width:880px) {
+  :root {--body-size:17px;--small-size:15px;--button-size:16px;}
+}
 </style></head><body>
 <header class="header" id="home"><div class="container header-inner"><a aria-label="NYS DBL and PFL Advisors home" class="brand" href="#home"><img alt="NYS DBL &amp; PFL Advisors Statue of Liberty logo" src="logo.png"/><div><div class="brand-name">NYS DBL &amp; PFL</div><div class="brand-sub">ADVISORS</div></div></a><nav aria-label="Main navigation" class="nav"><a href="#pricing">Pricing</a><a href="#home">Home</a><a href="#about">About Us</a><a href="https://www.youtube.com/@NYSDBLAdvisors" rel="noopener noreferrer" target="_blank">Resources</a><a href="#contact">Contact</a><a class="btn btn-green" href="#free-review">Free Questionnaire Review</a></nav><details class="mobile-nav"><summary>☰ Menu</summary><div class="mobile-links"><a href="#pricing">Pricing</a><a href="#about">About Us</a><a href="https://www.youtube.com/@NYSDBLAdvisors" rel="noopener noreferrer" target="_blank">Resources</a><a href="#contact">Contact</a><a href="#free-review">Free Questionnaire Review</a></div></details></div></header>
 <main><section class="hero"><div class="container hero-content"><div class="eyebrow">CLEAR GUIDANCE. MANY YEARS OF EXPERIENCE.<br/>FOR NEW YORK EMPLOYEES.</div><h1>Questions About<br/><span>NY Paid Family Leave</span> or Disability Benefits?</h1><p>Get clear, personalized guidance on eligibility, benefits, and the application process for New York State Paid Family Leave (PFL) and Short-Term Disability (DBL).</p><div class="hero-actions"><a class="btn btn-green" href="#free-review">▤  Free Questionnaire Review</a><a class="btn btn-ghost" href="https://www.youtube.com/@NYSDBLAdvisors" rel="noopener noreferrer" target="_blank">▶   Watch Our Videos</a><a class="btn btn-ghost" href="mailto:info@nysdbladvisors.com?subject=Free%20Consultation%20Inquiry">✉   Email Us Directly</a></div><p style="font-size:13px;opacity:.92;margin:12px 0 0;max-width:600px">Start with a short PFL or DBL questionnaire. We review your answers and follow up if further guidance is needed.</p></div></section>
