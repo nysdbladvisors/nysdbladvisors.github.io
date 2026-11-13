@@ -50,8 +50,8 @@ footer{padding:0 0 40px;font-size:13px;color:var(--muted)}footer .wrap>p{margin:
 </div></div></main>
 <footer><div class="wrap"><p><a href="/" style="text-decoration:underline">Back to nysdbladvisors.com</a></p><p>NYS DBL &amp; PFL Advisors is an independent advisory business and is not affiliated with or endorsed by the State of New York, the Workers’ Compensation Board, or any insurance carrier. Eligibility and benefits are determined by the carrier or claims administrator.</p></div></footer>
 <script>
-(function(){var src=new URLSearchParams(location.search).get('src')||'unknown';
+window.addEventListener('load',function(){var src=new URLSearchParams(location.search).get('src')||'unknown';
 try{if(window.gtag)gtag('event','generate_lead',{form_source:src});}catch(e){}
-try{if(window.fbq)fbq('track','Lead');}catch(e){}})();
+try{if(window.fbq)fbq('track','Lead');}catch(e){}});
 </script>
 </body></html>
