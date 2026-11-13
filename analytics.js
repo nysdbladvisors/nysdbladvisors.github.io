@@ -1,6 +1,6 @@
 /* Site-wide analytics loader. Paste your IDs below. While both are empty, nothing loads. */
 (function () {
-  var GA4_ID = '';        // example: 'G-XXXXXXXXXX'
+  var GA4_ID = 'G-ME40CQC5XF';        // example: 'G-XXXXXXXXXX'
   var META_PIXEL_ID = ''; // example: '123456789012345'
   if (GA4_ID) {
     var s = document.createElement('script');
